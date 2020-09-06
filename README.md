@@ -25,4 +25,5 @@ Date | Time | Estimate | Actual | Description | Notes
 
 
 ###Database Design: *ERD*
+
 ![ERD image](./Assignment/Resources/ERD.png "ERD")
