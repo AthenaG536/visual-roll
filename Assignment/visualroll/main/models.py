@@ -23,6 +23,6 @@ class Group(models.Model):
         return self.g_name
 
 class GroupUser(models.Model):
-    user = models.ForeignObject(User, on_delete=models.CASCADE)
-    Group = models.ForeignObject(Group, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    Group = models.ForeignKey(Group, on_delete=models.CASCADE)
     timestamp = models.DateTimeField('Date Joined', default=datetime.now, blank=True)

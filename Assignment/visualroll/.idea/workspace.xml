@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Models, admin and some fixes to the web design">
-      <change afterPath="$PROJECT_DIR$/../Resources/Resources-Used" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
     </list>
@@ -98,7 +97,7 @@
       <workItem from="1600484219428" duration="40000" />
       <workItem from="1600486448655" duration="349000" />
       <workItem from="1600486815478" duration="4447000" />
-      <workItem from="1600500814341" duration="1087000" />
+      <workItem from="1600500814341" duration="1669000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -114,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600499123269</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add new model and reference doc for other resources">
+      <created>1600502293306</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600502293306</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +142,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Finalizing setup + venv" />
     <MESSAGE value="Models, admin and some fixes to the web design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Models, admin and some fixes to the web design" />
+    <MESSAGE value="Add new model and reference doc for other resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new model and reference doc for other resources" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="273" key="#Notifications" timestamp="1600480333639">
