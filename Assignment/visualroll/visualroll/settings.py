@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2dx13=d2otk7b6y#s9hh&ialne!zkb_v+6e^eq48*j_#ur)&%n'
+SECRET_KEY = 'ott@5+n26a1ix6o6ugi_&t7hjcpzzhgzum!u2k*0^yahcl#(3m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,8 @@ ROOT_URLCONF = 'visualroll.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
