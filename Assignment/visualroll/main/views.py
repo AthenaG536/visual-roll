@@ -7,5 +7,9 @@ def index(request):
 
 def register(request):
     return HttpResponse("Welcome to Visual Roll.")
+
 def create_group(request):
     return HttpResponse("Welcome to Visual Roll.")
+
+def view_group(request, group_id):
+    return HttpResponse("Group name: %s" % group_id)
