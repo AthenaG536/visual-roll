@@ -22,7 +22,14 @@ class Group(models.Model):
     def __str__(self):
         return self.g_name
 
-class GroupUser(models.Model):
+class Members(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    Group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
     timestamp = models.DateTimeField('Date Joined', default=datetime.now, blank=True)
+    def __str__(self):
+        str = ""
+        str = str + User.get(self.user).first_name + " joined the " + Group.get(self.group).g_name + " group at: " + self.timestamp
+        return str
+
+class Post(models.Model):
+    details = models.TextField("Post Details")
