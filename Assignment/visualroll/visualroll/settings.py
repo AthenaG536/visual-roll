@@ -69,7 +69,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'visualroll.wsgi.application'
+#WSGI_APPLICATION = 'visualroll.wsgi.application'
+ASGI_APPLICATION = 'visualroll.asgi.application'
 
 
 # Database
