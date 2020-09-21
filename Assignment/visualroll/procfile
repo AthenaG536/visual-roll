@@ -1,1 +1,1 @@
-web: gunicorn visualroll.wsgi --log-file -
+web: uvicorn visualroll.asgi --workers 4
