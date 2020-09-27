@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Updated GroupUserModel">
-      <change afterPath="$PROJECT_DIR$/main/migrations/0003_auto_20200927_1633.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s/secret_key.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="SK">
       <change beforePath="$PROJECT_DIR$/visualroll/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualroll/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +100,7 @@
       <workItem from="1600640207362" duration="513000" />
       <workItem from="1600912348749" duration="742000" />
       <workItem from="1601176453670" duration="1187000" />
-      <workItem from="1601183722894" duration="4126000" />
+      <workItem from="1601183722894" duration="4452000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -137,7 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600502513503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moving secretkey">
+      <created>1601190303929</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601190303929</updated>
+    </task>
+    <task id="LOCAL-00006" summary="SK">
+      <created>1601190416011</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601190416011</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +168,9 @@
     <MESSAGE value="Models, admin and some fixes to the web design" />
     <MESSAGE value="Add new model and reference doc for other resources" />
     <MESSAGE value="Updated GroupUserModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated GroupUserModel" />
+    <MESSAGE value="moving secretkey" />
+    <MESSAGE value="SK" />
+    <option name="LAST_COMMIT_MESSAGE" value="SK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="273" key="#Notifications" timestamp="1600480333639">
@@ -200,10 +209,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600912417833" />
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600502523313">
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601190449824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600502523313" />
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601190449824" />
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600496331878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
