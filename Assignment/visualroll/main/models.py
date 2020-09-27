@@ -17,7 +17,7 @@ class Group(models.Model):
     g_name = models.CharField('Group Name', max_length=255)
     g_info = models.TextField('Group Info')
     creator = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    date_created = models.DateField('Date Created', default=date.today, blank=True)
+    date_created = models.DateTimeField('Date Created', auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
         return self.g_name
