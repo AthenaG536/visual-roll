@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Editing to use uvicorn" />
+    <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Editing to use uvicorn">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +101,8 @@
       <workItem from="1600640207362" duration="513000" />
       <workItem from="1600912348749" duration="742000" />
       <workItem from="1601176453670" duration="1187000" />
-      <workItem from="1601183722894" duration="9580000" />
+      <workItem from="1601183722894" duration="10330000" />
+      <workItem from="1601251465976" duration="22000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -163,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601195260766</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Editing to use uvicorn">
+      <created>1601195771827</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601195771827</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,17 +244,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="397" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601193206312" />
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601195268372">
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601195837904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601195268372" />
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601195837904" />
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600496331878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496331878" />
-    <state x="347" y="198" key="git4idea.merge.GitPullDialog" timestamp="1600485054146">
+    <state x="347" y="198" key="git4idea.merge.GitPullDialog" timestamp="1601195823753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="347" y="198" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1600485054146" />
+    <state x="347" y="198" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1601195823753" />
   </component>
 </project>
