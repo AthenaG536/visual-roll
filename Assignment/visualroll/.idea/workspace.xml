@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Editing to use uvicorn">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0004_photo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0005_auto_20200928_1814.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0006_auto_20200928_1842.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualroll/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualroll/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +51,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="JupyterTrust" id="5b6b6e44-6d9c-4fe9-a82f-609dfa2e0796" />
   <component name="ProjectId" id="1hi3ZmV225wvTXEvh9cBYwUQ0kn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -81,6 +87,7 @@
       <recent name="C:\Users\athen\OneDrive - Unitec NZ\BCS\ISCG7420-WAD\Assignment One\Project\web-assignment-AthenaG536\Assignment\visualroll\main" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -102,7 +109,8 @@
       <workItem from="1600912348749" duration="742000" />
       <workItem from="1601176453670" duration="1187000" />
       <workItem from="1601183722894" duration="10330000" />
-      <workItem from="1601251465976" duration="22000" />
+      <workItem from="1601251465976" duration="11660000" />
+      <workItem from="1601272905042" duration="3311000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -174,11 +182,18 @@
       <option name="project" value="LOCAL" />
       <updated>1601195771827</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Uvicorn">
+      <created>1601251512868</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601251512868</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -201,7 +216,8 @@
     <MESSAGE value="moving secretkey" />
     <MESSAGE value="SK" />
     <MESSAGE value="Editing to use uvicorn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editing to use uvicorn" />
+    <MESSAGE value="Uvicorn" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uvicorn" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="182" key="#Inspections" timestamp="1601192241298">
@@ -216,6 +232,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="107" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600640426981" />
+    <state x="449" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1601271798886">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1601271798886" />
     <state x="757" y="68" key="#visualroll" timestamp="1600480874450">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -240,14 +260,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600481607536" />
-    <state x="397" y="113" key="SettingsEditor" timestamp="1601193206312">
+    <state width="211" height="499" key="HiddenNamespacesPopup" timestamp="1601278691095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601193206312" />
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601195837904">
+    <state width="211" height="499" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1601278691095" />
+    <state x="397" y="113" key="SettingsEditor" timestamp="1601257095516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601195837904" />
+    <state x="397" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601257095516" />
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601251518243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601251518243" />
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600496331878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
