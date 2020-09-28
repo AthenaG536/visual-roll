@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Editing to use uvicorn">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/0004_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/0005_auto_20200928_1814.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/0006_auto_20200928_1842.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualroll/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualroll/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,7 @@
       <workItem from="1601176453670" duration="1187000" />
       <workItem from="1601183722894" duration="10330000" />
       <workItem from="1601251465976" duration="11660000" />
-      <workItem from="1601272905042" duration="3311000" />
+      <workItem from="1601272905042" duration="5198000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -189,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601251512868</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finishing models.py">
+      <created>1601279052726</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1601279052726</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +221,8 @@
     <MESSAGE value="SK" />
     <MESSAGE value="Editing to use uvicorn" />
     <MESSAGE value="Uvicorn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uvicorn" />
+    <MESSAGE value="Finishing models.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing models.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="182" key="#Inspections" timestamp="1601192241298">
@@ -276,6 +281,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496331878" />
+    <state x="337" y="20" width="1213" height="536" key="dock-window-1" timestamp="1601282922324">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="337" y="20" width="1213" height="536" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1601282922324" />
+    <state x="603" y="147" width="1213" height="536" key="dock-window-2" timestamp="1601282922324">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="603" y="147" width="1213" height="536" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1601282922324" />
     <state x="347" y="198" key="git4idea.merge.GitPullDialog" timestamp="1601195823753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

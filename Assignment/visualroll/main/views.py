@@ -13,3 +13,9 @@ def create_group(request):
 
 def view_group(request, group_id):
     return HttpResponse("Group name: %s" % group_id)
+
+def view_photo(request, photo_id):
+    return HttpResponse("Photo name: %s" % photo_id)
+
+def members(request, member_id):
+    return HttpResponse("Member: %s" % member_id)
