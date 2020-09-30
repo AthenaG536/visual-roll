@@ -1,6 +1,9 @@
+import datetime
+
 from django.db import models
 from django.forms import forms
 from django.utils.datetime_safe import date, datetime
+from django.utils import timezone
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
 
@@ -39,8 +42,14 @@ class Members(models.Model):
 
 class Post(models.Model):
     details = models.TextField("Post Details")
+    post_timestamp = models.DateTimeField('Date Joined', default=datetime.now, blank=True)
     def __str__(self):
         return self.details
+
+    def was_published_recently(self):
+        return self.post_timestamp >= timezone.now() - datetime.timedelta(days=1)
+    class Meta:
+        ordering = ['commenttimestamp']
 
 class Likedpost(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
@@ -64,9 +73,9 @@ class Comment(models.Model):
     details = models.TextField('Comment')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    commenttimestamp = models.DateTimeField('Date commented', default=datetime.now, blank=True)
+    comment_timestamp = models.DateTimeField('Date commented', default=datetime.now, blank=True)
     def __str__(self):
         return self.details
 
     class Meta:
-        ordering = ['commenttimestamp']
+        ordering = ['comment_timestamp']
