@@ -23,9 +23,12 @@ Date | Time | Estimate | Actual | Description | Notes
 12/09/20 | 1:00pm | 90mins | 120mins | Researching Github & setting up Database.	| Had issues with putting local files onto Github (Still not resolved), Used models to set up Database.
 17/09/20 | 7:30am | 60mins | Most of day | Fix github | Had many troubles with Windows 10 update that didn't fully work and didn't actually get to sorting github out.
 18/09/20 | 2:00pm | 60mins | 10mins | Fix github issues 2.0 | Finally fixed Github problems
-18/09/20 | 2:10pm | 60mins | mins | Update developers log & setting up  first 3 pages | Updating log to reflect issues & set up  registration/Sign in/Create Group pages.
-
-
+18/09/20 | 2:10pm | 60mins | 40mins | Update developers log & setting up  first 3 pages | Updating log to reflect issues & set up  registration/Sign in/Create Group pages.
+19/09/20 | 11:00am | 120mins | 90mins | Updating models & setup + venv | Setup virtual environment, adding views, adding __str__ to models, add GroupUser models and auto_now DateField to Group model 
+21/09/20 | 11:00am | 240mins | 240mins | Host with Heroku | Update procfile, research alternatives of gunicorn for Windows, attempting to use just uvicorn.
+27/09/20 | 11:00am | 60mins | 70mins | Making changes to work with uvicorn + secretkey | Attempted to access secret key through a file, editing main.py and procfile to try fix problems with just using uvicorn
+28/09/20 | 4:00pm | 120mins | 90mins | Updating models & setup + venv | Realised I hadn't set up venv correctly so did this again, added other models, added views for other models, updated urls, added MEDIA_ROOT, attempted fixing a uvicorn issue.
+30/09/20 | 3:00pm | 60mins | 120mins | Adding template, another view, added Now DateTime fields | Had trouble with adding Now DateTime fields, had to try multiple ways then finally got it to work.
 
 
 
