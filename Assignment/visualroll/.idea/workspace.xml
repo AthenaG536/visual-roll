@@ -20,11 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c63c186-5984-4d98-bcd9-6b7ef3f49c5b" name="Default Changelist" comment="Editing to use uvicorn">
-      <change afterPath="$PROJECT_DIR$/templates/group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0007_auto_20201001_1444.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0008_post_group.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0009_auto_20201002_1256.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/migrations/0010_auto_20201003_1319.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/group.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,6 +94,7 @@
       <recent name="C:\Users\athen\OneDrive - Unitec NZ\BCS\ISCG7420-WAD\Assignment One\Project\web-assignment-AthenaG536\Assignment\visualroll\main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\athen\OneDrive - Unitec NZ\BCS\ISCG7420-WAD\Assignment One\Project\web-assignment-AthenaG536\Assignment\visualroll\templates" />
       <recent name="C:\Users\athen\OneDrive - Unitec NZ\BCS\ISCG7420-WAD\Assignment One\Project\web-assignment-AthenaG536\Assignment\visualroll\main" />
     </key>
   </component>
@@ -112,7 +122,8 @@
       <workItem from="1601183722894" duration="10330000" />
       <workItem from="1601251465976" duration="11660000" />
       <workItem from="1601272905042" duration="5294000" />
-      <workItem from="1601425718526" duration="4072000" />
+      <workItem from="1601425718526" duration="23939000" />
+      <workItem from="1601682696098" duration="14904000" />
     </task>
     <task id="LOCAL-00001" summary="Finalizing setup + venv">
       <created>1600483933281</created>
@@ -205,7 +216,63 @@
       <option name="project" value="LOCAL" />
       <updated>1601283259607</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Adding welcome message">
+      <created>1601436711510</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1601436711510</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adding timestamps and was published recently function">
+      <created>1601436749122</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1601436749122</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adding group_posts view">
+      <created>1601436793188</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601436793188</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Creating a group template">
+      <created>1601436837063</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601436837063</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updated Debug for testing">
+      <created>1601575316546</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1601575316546</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated Urls to have group/photo/member IDs">
+      <created>1601575374703</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1601575374703</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated __str__ to be relevant">
+      <created>1601575446004</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1601575446004</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated README.md with new Dev Logs">
+      <created>1601575499399</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1601575499399</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +302,15 @@
     <MESSAGE value="Uvicorn" />
     <MESSAGE value="Finishing models.py" />
     <MESSAGE value="Finishing admin.py &amp; adding views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing admin.py &amp; adding views" />
+    <MESSAGE value="Adding welcome message" />
+    <MESSAGE value="Adding timestamps and was published recently function" />
+    <MESSAGE value="Adding group_posts view" />
+    <MESSAGE value="Creating a group template" />
+    <MESSAGE value="Updated Debug for testing" />
+    <MESSAGE value="Updated Urls to have group/photo/member IDs" />
+    <MESSAGE value="Updated __str__ to be relevant" />
+    <MESSAGE value="Updated README.md with new Dev Logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md with new Dev Logs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="182" key="#Inspections" timestamp="1601192241298">
@@ -258,10 +333,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="757" y="68" key="#visualroll/0.0.1536.824@0.0.1536.824" timestamp="1600480874450" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1600484256330">
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1601682437879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600484256330" />
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601682437879" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600481607536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -282,29 +357,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="211" height="499" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1601278691095" />
-    <state x="397" y="113" key="SettingsEditor" timestamp="1601257095516">
+    <state x="397" y="113" key="SettingsEditor" timestamp="1601598130139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601257095516" />
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601283270457">
+    <state x="397" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601598130139" />
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601436846665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601283270457" />
+    <state x="352" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601436846665" />
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600496331878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="906" y="184" width="580" height="462" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496331878" />
-    <state x="484" y="530" width="1186" height="528" key="dock-window-1" timestamp="1601427889765">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601519003977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="484" y="530" width="1186" height="528" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1601427889765" />
-    <state x="543" y="331" width="1213" height="536" key="dock-window-2" timestamp="1601435519298">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1601519003977" />
+    <state x="342" y="301" width="1186" height="528" key="dock-window-1" timestamp="1601517381147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="543" y="331" width="1213" height="536" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1601435519298" />
+    <state x="342" y="301" width="1186" height="528" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1601517381147" />
+    <state x="798" y="255" width="1213" height="536" key="dock-window-2" timestamp="1601516624192">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="798" y="255" width="1213" height="536" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1601516624192" />
     <state x="347" y="198" key="git4idea.merge.GitPullDialog" timestamp="1601195823753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="347" y="198" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1601195823753" />
+    <state x="786" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601683542123">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="786" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601683542123" />
   </component>
 </project>
