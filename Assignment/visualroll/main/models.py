@@ -14,7 +14,11 @@ class User(models.Model):
     last_name = models.CharField('Last Name', max_length=255)
     password = models.CharField('password', max_length=255)
     def __str__(self):
+        return '{} {}'.format(self.first_name, self.last_name)
+    def get_user_email(self):
         return '{} {}, email: {}'.format(self.first_name, self.last_name, self.email)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
 
 class Group(models.Model):
@@ -23,7 +27,11 @@ class Group(models.Model):
     creator = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     date_created = models.DateTimeField('Date Created', auto_now_add=True, blank=True, null=True)
     def __str__(self):
+        return '{}'.format(self.g_name)
+    def get_group_by_creater(self):
         return '{} created by {}'.format(self.g_name, self.creator)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
     class Meta:
         ordering = ['date_created']
@@ -34,36 +42,48 @@ class Members(models.Model):
     timestamp = models.DateTimeField('Date Joined', default=datetime.now, blank=True)
     def __str__(self):
         return '{} joined the {} group at: {}'.format(self.user, self.group, self.timestamp)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
     class Meta:
         ordering = ['timestamp']
 
 class Post(models.Model):
     details = models.TextField("Post Details")
-    post_timestamp = models.DateTimeField('Date Joined', default=datetime.now, blank=True)
+    post_timestamp = models.DateTimeField('Posted Date', default=datetime.now, blank=True)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, default=id(Group))
     def __str__(self):
         return self.details
 
     def was_published_recently(self):
         return self.post_timestamp >= timezone.now() - datetime.timedelta(days=1)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
+
     class Meta:
         ordering = ['post_timestamp']
 
 class Likedpost(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
 class Photo(models.Model):
     image = models.ImageField(upload_to="photos")
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     def __str__(self):
         return self.image
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
 class Likedphoto(models.Model):
     photo = models.ForeignKey(Photo, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return '{} {}, email:'.format(self.user, self.photo)
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
 class Comment(models.Model):
     details = models.TextField('Comment')
@@ -72,6 +92,8 @@ class Comment(models.Model):
     comment_timestamp = models.DateTimeField('Date commented', default=datetime.now, blank=True)
     def __str__(self):
         return self.details
+    def get_absolute_url(self):
+        return '/%s/' % self.name
 
     class Meta:
         ordering = ['comment_timestamp']
