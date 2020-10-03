@@ -103,8 +103,8 @@
     <div class="container">
         <nav class="topnav" id="myTopnav">
             <a class="topnav-active" href="{% url 'index' %}">Home</a>
-            <a href="/account/1">My account</a>
-            <a class="topnav navright" href="1/mygroups/">Groups</a>
+            <a href="{% url 'user' 1 %}">My account</a>
+            <a class="topnav navright" href="{% url 'group' 1 %}">Groups</a>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fas fa-bars"></i>
