@@ -102,9 +102,9 @@
     </div>
     <div class="container">
         <nav class="topnav" id="myTopnav">
-            <a class="topnav-active" href="#">Home</a>
-            <a href="#">Link</a>
-            <a class="topnav navright" href="#">Link</a>
+            <a class="topnav-active" href="{% url 'index' %}">Home</a>
+            <a href="/account/1">My account</a>
+            <a class="topnav navright" href="1/mygroups/">Groups</a>
 
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fas fa-bars"></i>
@@ -114,6 +114,7 @@
 
     <br />
     <br />
+    <h2>{% block title %}{% endblock %}</h2>
     {% block content %}{% endblock %}
 
     <div class="footer">
