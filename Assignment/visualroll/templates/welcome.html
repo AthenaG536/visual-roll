@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% load static %}
+{% block header %}
+    <div class="container">
+        <nav class="topnav" id="myTopnav">
+            <a class="topnav-active" href="{% url 'main:index' %}">Home</a>
+            <a class="topnav navright" style="float: right;" href="{% url 'main:register' %}">Register</a>
+            <a class="topnav navright" style="float: right;" href="{% url 'main:login' %}">Login</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </div>
+{% endblock %}
+
+{% block title %}Welcome to Visual Roll</h2>{% endblock %}
+{% block content %}
+    <p style="text-align: center"><em>Share pictures between friends and family.</em><br /><br />
+        Visual Roll provides a space for users to share images privately among friends and family. <br />
+        Share photos of groups, events and occasions between other members by invite only. </p>
+{% endblock %}
