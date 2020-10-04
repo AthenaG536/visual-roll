@@ -1,6 +1,0 @@
-django
-uvicorn
-django-heroku
-djangorestframework
-pygments
-
