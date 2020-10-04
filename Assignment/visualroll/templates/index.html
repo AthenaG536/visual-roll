@@ -1,8 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Home{% endblock %}
 
-{% block content %}
-    <div>Welcome to Visual Roll</div>
+{% block page %}
+    <div class="container">
+        <nav class="topnav" id="myTopnav">
+            <a class="topnav-active" href="{% url 'main:index' %}">Home</a>
+            <a class="navright" href="{% url 'main:group' 1 %}">Groups</a>
+            <a href="{% url 'main:user' 1 %}">My account</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </div>
+    <div class="content-main" style="overflow: auto;">
+        <hr width="100%" align="middle" style="border:none;height:2px;background-color:#70d8eb;margin-top: auto;">
+        <h2>{% block title %}{% endblock %}</h2>
+        <div class="content-main content-main-subcontent">{% block content %}{% endblock %}</div>
+
+    </div>
 
 {% endblock %}

@@ -1,9 +1,38 @@
-{% extends "base.html" %}
+{% extends "home.html" %}
 {% load static %}
+
+{% block header %}
+    <div class="container">
+        <nav class="topnav" id="myTopnav">
+            <a class="topnav" href="{% url 'main:index' %}">Home</a>
+            <a class="topnav navright" style="float: right;" href="{% url 'main:register' %}">Register</a>
+            <a class="topnav-active navright" style="float: right;" href="{% url 'main:login' %}">Login</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+    </div>
+{% endblock %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
 
+<form method="post" novalidate>
+  {% csrf_token %}
+  <table border="1">
+    {{ form }}
+  </table>
+  <button type="submit">Submit</button>
+</form>
+
+<div>
+    <form action="/login/" method="post">
+    {% csrf_token %}
+    {{ form }}
+
+</form>
+</div>
 
 {% endblock %}
