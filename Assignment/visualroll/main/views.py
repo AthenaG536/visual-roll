@@ -1,7 +1,9 @@
 import os
 
+from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -11,6 +13,11 @@ from main.models import Post, Group, Members, User, Likedphoto, Likedpost, UserF
 
 class UserView(generic.DetailView):
     model = User
+    fields = ["email", "first_name", "last_name", "password"]
+    members = model.get_related_members(model)
+    groups = []
+    for member in members:
+        groups.append(member.group)
     template_name = 'user.html'
 
 
@@ -29,8 +36,30 @@ def index(request):
 def home(request):
     return render(request, 'welcome.html')
 
-def login(request):
-    return render(request, 'login.html')
+def login_request(request):
+    if request.method == 'POST':
+        form = UserForm(data=request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            try:
+                userbyemail = User.objects.get(email=email)
+                user = User.authenticate(userbyemail, password=password)
+                if user is not None:
+                    login(request, user)
+                    messages.info(request, f"You are now logged in as {email}")
+                    return redirect(user.get_absolute_url)
+                else:
+                    messages.error(request, "Invalid username or password.")
+            except:
+                messages.error(request, "Invalid username or password.")
+
+        else:
+            messages.error(request, "Invalid username or password.")
+    form = UserForm()
+    return render(request = request,
+                    template_name = "login.html",
+                    context={"form":form})
 
 def register(request):
     return render(request, 'user.html')
@@ -59,11 +88,16 @@ def view_photo(request, photo_id):
 def members(request, member_id):
     return HttpResponse("Member: %s" % member_id)
 
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Logged out successfully!")
+    return redirect("main:index")
 
 class UserCreate(CreateView):
     model = User
     fields = ["email","first_name","last_name","password"]
     template_name = "register.html"
+    success_url = "/login/"
 
 class AuthorUpdate(UpdateView):
     model = User

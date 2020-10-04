@@ -1,7 +1,8 @@
 import datetime
 
+import django
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, forms
 from django.urls import reverse
 from django.utils.datetime_safe import date, datetime
 from django.utils import timezone
@@ -11,16 +12,40 @@ from pygments.styles import get_all_styles
 
 # Classes
 class User(models.Model):
-    email = models.CharField('Email', max_length=320)
+    email = models.CharField('Email', max_length=320, unique=True)
     first_name = models.CharField('First Name', max_length=255)
     last_name = models.CharField('Last Name', max_length=255)
     password = models.CharField('password', max_length=255)
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
+
     def get_user_email(self):
         return '{} {}, email: {}'.format(self.first_name, self.last_name, self.email)
+
     def get_absolute_url(self):
         return reverse('account/%s/' % self.id)
+
+    def check_password(self,entered_password):
+        if self.password == entered_password:
+            return True
+        else:
+            return False
+    def get_related_members(self):
+        member_list = Members.objects.filter(User=self)
+        return member_list
+
+    def authenticate(self, password=None):
+        try:
+            #  Check the password is the reverse of the username
+            if self.check_password(self, password):
+                # Yes? return the Django user object
+                return self
+            else:
+                # No? return None - triggers default login failed
+                return None
+        except User.DoesNotExist:
+            # No user was found, return None - triggers default login failed
+            return None
 
 class Group(models.Model):
     g_name = models.CharField('Group Name', max_length=255)
@@ -33,6 +58,9 @@ class Group(models.Model):
         return '{} created by {}'.format(self.g_name, self.creator)
     def get_absolute_url(self):
         return reverse('/%s/mygroups' % self.id)
+    def get_related_members(self):
+        member_list = Members.objects.filter(Group=self)
+        return member_list
 
     class Meta:
         ordering = ['date_created']
@@ -49,6 +77,10 @@ class Members(models.Model):
     class Meta:
         ordering = ['timestamp']
 
+
+
+
+
 class Post(models.Model):
     details = models.TextField("Post Details")
     post_timestamp = models.DateTimeField('Posted Date', default=datetime.now, blank=True)
@@ -60,6 +92,13 @@ class Post(models.Model):
         return self.post_timestamp >= timezone.now() - datetime.timedelta(days=1)
     def get_absolute_url(self):
         return '/%s/' % self.name
+
+    # Required for your backend to work properly - unchanged in most scenarios
+    def get_user(self, user_id):
+        try:
+            return User.objects.get(pk=user_id)
+        except User.DoesNotExist:
+            return None
 
     class Meta:
         ordering = ['post_timestamp']
@@ -102,9 +141,10 @@ class Comment(models.Model):
 
 # Forms
 class UserForm(ModelForm):
-    class Meta:
+    password = django.forms.CharField(widget=django.forms.PasswordInput())
+    class Meta():
         model = User
-        fields = ["email","first_name","last_name","password"]
+        fields = ('email', 'password')
 
 
 class GroupForm(ModelForm):

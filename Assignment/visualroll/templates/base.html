@@ -5,11 +5,9 @@
     <title>Visual Roll</title>
     <script src="https://kit.fontawesome.com/1cf5f2b797.js" crossorigin="anonymous"></script>
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
 
-    <style>
-        body {
+    <style>        body {
             margin: 0;
             height: 100%;
             background-color: rgba(202,240,248,0.5);
@@ -139,10 +137,8 @@
         text-align: left;
 
     }
+}</style>
 
-
-}
-    </style>
 </head>
 <body>
     <div class="header">
@@ -155,15 +151,16 @@
     <div class="footer">
         <p>Athena Gardner Student id: 1507059</p>
     </div>
-    <script>
-        function myFunction() {
+
+<script>
+    (function responsive() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
             } else {
                 x.className = "topnav";
             }
-        }
-</script>
+        })();</script>
 </body>
+
 </html>
