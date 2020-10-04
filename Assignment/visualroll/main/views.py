@@ -14,12 +14,7 @@ from main.models import Post, Group, Members, User, Likedphoto, Likedpost, UserF
 class UserView(generic.DetailView):
     model = User
     fields = ["email", "first_name", "last_name", "password"]
-    members = model.get_related_members(model)
-    groups = []
-    for member in members:
-        groups.append(member.group)
     template_name = 'user.html'
-
 
 
 class GroupView(generic.ListView):
@@ -27,7 +22,6 @@ class GroupView(generic.ListView):
     context_object_name = 'group_list'
 
     def get_queryset(self):
-        """Return groups by date created."""
         return Group.objects.order_by('-date_created')
 
 def index(request):
