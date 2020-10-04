@@ -15,6 +15,3 @@ from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'visualroll.settings')
 
 application = get_asgi_application()
-
-if __name__ == '__main__':
-    uvicorn.run(application, host='https://visualroll.herokuapp.com/')

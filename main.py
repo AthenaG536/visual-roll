@@ -23,13 +23,17 @@ from rest_framework import routers
 #         "version": f"Hello world! From FastAPI running on Uvicorn. Using Python {version}"
 #     }
 
-class App:
-    async def __call__(self, scope, receive, send):
-        assert scope['type'] == 'http'
+app = FastAPI()
+
+hostname = socket.gethostname()
+
+version = f"{sys.version_info.major}.{sys.version_info.minor}"
 
 
-
-app = App()
-
-if __name__ == "__main__":
-    uvicorn.run(app)
+@app.get("/")
+async def read_root():
+    return {
+        "name": "my-app",
+        "host": hostname,
+        "version": f"Hello world! From FastAPI running on Uvicorn. Using Python {version}"
+    }
