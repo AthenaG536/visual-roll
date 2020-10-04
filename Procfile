@@ -1,0 +1,1 @@
+web: uvicorn visualroll.asgi:application

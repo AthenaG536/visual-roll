@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+{% block title %}Your profile{% endblock %}
+
+{% if user %}
+<p>Name: {{ user.first_name }} {{ user.last_name }}<br />
+    Email: {{ user.email }}</p>
+<h3>Your groups</h3>
+
+{% endif %}
+
+
+
+{% if groups %}
+    <ul>
+    {% for group in groups %}
+        <li><a href="{{ group.get_absolute_url }}">{{ group.g_name }} <br />{{ group.g_info}}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>You don't have any groups yet.</p>
+{% endif %}
+{% endblock %}
+

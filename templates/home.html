@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page %}
+    {% block header %}{% endblock %}
+    <div class="content-main" style="overflow: auto;">
+        <hr width="100%" align="middle" style="border:none;height:2px;background-color:#70d8eb;margin-top: auto;">
+        <h2>{% block title %}{% endblock %}</h2>
+        <div class="content-main content-main-subcontent">{% block content %}{% endblock %}</div>
+
+    </div>
+
+{% endblock %}
