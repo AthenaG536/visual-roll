@@ -11,8 +11,34 @@
     <style>
         body {
             margin: 0;
+            height: 100%;
+            background-color: rgba(202,240,248,0.5);
+        }
+        .content-main {
+            background-color: rgba(202,240,248,0.5);
         }
 
+        .content-main-subcontent {
+            padding: 5%;
+        }
+
+        h2{
+            text-align: center;
+            margin: auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            width: fit-content;
+        }
+
+        h2:after {
+            content: '';
+            background: #70d8eb;
+            margin-top: 10px;
+            width: 130%;
+            margin-left: -15%;
+            height: 1px;
+            display: block;
+        }
 
         /* Style the header */
         .header {
@@ -45,6 +71,9 @@
         .topnav a:hover {
             background-color: #030663;
             color: #90E0EF;
+        }
+        .right {
+            float: right;
         }
         .topnav .icon {
             display: none;
@@ -90,9 +119,8 @@
         text-align: left;
 
     }
-    .navright {
-        float: right;
-    }
+
+
 }
     </style>
 </head>
@@ -100,25 +128,12 @@
     <div class="header">
         <h1><i class="fas fa-images"></i> Visual Roll</h1>
     </div>
-    <div class="container">
-        <nav class="topnav" id="myTopnav">
-            <a class="topnav-active" href="{% url 'index' %}">Home</a>
-            <a href="{% url 'user' 1 %}">My account</a>
-            <a class="topnav navright" href="{% url 'group' 1 %}">Groups</a>
-
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fas fa-bars"></i>
-            </a>
-        </nav>
-    </div>
-
-    <br />
-    <br />
-    <h2>{% block title %}{% endblock %}</h2>
-    {% block content %}{% endblock %}
+    <hr width="100%" align="middle" style="border:none;height:2px;background-color:#70d8eb;margin: auto;">
+    {% block page %}
+    {% endblock %}
 
     <div class="footer">
-        <p>Footer</p>
+        <p>Athena Gardner Student id: 1507059</p>
     </div>
     <script>
         function myFunction() {
