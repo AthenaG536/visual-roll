@@ -1,13 +1,15 @@
 import datetime
 
 from django.db import models
-from django.forms import forms
+from django.forms import ModelForm
+from django.urls import reverse
 from django.utils.datetime_safe import date, datetime
 from django.utils import timezone
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
 
 
+# Classes
 class User(models.Model):
     email = models.CharField('Email', max_length=320)
     first_name = models.CharField('First Name', max_length=255)
@@ -18,8 +20,7 @@ class User(models.Model):
     def get_user_email(self):
         return '{} {}, email: {}'.format(self.first_name, self.last_name, self.email)
     def get_absolute_url(self):
-        return '/%s/' % self.name
-
+        return reverse('account/%s/' % self.id)
 
 class Group(models.Model):
     g_name = models.CharField('Group Name', max_length=255)
@@ -31,7 +32,7 @@ class Group(models.Model):
     def get_group_by_creater(self):
         return '{} created by {}'.format(self.g_name, self.creator)
     def get_absolute_url(self):
-        return '/%s/' % self.name
+        return reverse('/%s/mygroups' % self.id)
 
     class Meta:
         ordering = ['date_created']
@@ -97,3 +98,17 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['comment_timestamp']
+
+
+# Forms
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ["email","first_name","last_name","password"]
+
+
+class GroupForm(ModelForm):
+    class Meta:
+        model = Group
+        fields = ["g_name", "g_info"]
+
