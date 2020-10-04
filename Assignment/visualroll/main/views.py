@@ -1,14 +1,19 @@
-from django.http import HttpResponse, Http404
+import os
+
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from main.models import Post, Group, Members, User, Likedphoto, Likedpost
+from main.models import Post, Group, Members, User, Likedphoto, Likedpost, UserForm
 
 
 class UserView(generic.DetailView):
     model = User
     template_name = 'user.html'
+
+
 
 class GroupView(generic.ListView):
     template_name = 'group.html'
@@ -28,7 +33,7 @@ def login(request):
     return render(request, 'login.html')
 
 def register(request):
-    return render(request, 'register.html')
+    return render(request, 'user.html')
 
 def user_groups(request, user_id):
     user = get_object_or_404(User, pk=user_id)
@@ -53,6 +58,17 @@ def view_photo(request, photo_id):
 
 def members(request, member_id):
     return HttpResponse("Member: %s" % member_id)
+
+
+class UserCreate(CreateView):
+    model = User
+    fields = ["email","first_name","last_name","password"]
+    template_name = "register.html"
+
+class AuthorUpdate(UpdateView):
+    model = User
+    fields = ["email","first_name","last_name","password"]
+
 
 #
 # def user_login(request):
